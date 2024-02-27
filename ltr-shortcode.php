@@ -18,6 +18,68 @@ add_shortcode( 'ltr', 'rs_ltr' );
 function rs_lrt_init(){
  function rs_ltr() {
         ?>
+        <style>
+
+.rs-list-container{
+	width: 70%;
+	margin: 0 auto;
+}
+
+.rs-card-body{
+	height: 100px;
+	overflow: hidden;
+
+}
+
+.header-elements-button-1{
+	padding: 8px 8px 8px 7px!important
+}
+.microwidget-btn{
+	padding: 8px 8px 8px 7px!important
+}
+
+
+.rs-card-container{
+	margin: 0 auto;
+	width: 60%;
+}
+.rs-animal-card{
+	padding-right: 0px;
+	padding-left: 0px;
+	
+}
+.rs-card-border{
+		border: 3px solid #88cd00!important;
+	border-radius: 15px;
+}
+.rs-read-more{
+	width: 98%;
+	color: white;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	background-color: #88cd00;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 0px 0px 10px 10px;
+
+}
+
+.rs-text-box{
+	background-color: white!important;
+}
+.rs-card-title{
+	padding-top: 7px;
+	color: #88cd00;
+}
+.tileImg{
+	background-position: center;
+}
+.rs-tile-title{
+	padding-top: 7px;
+}
+
+        </style>
         <script>
         
 
@@ -55,7 +117,7 @@ function rs_lrt_init(){
           numLoop++;
           var animalName = card.name.replaceAll(' ','');
          // console.log(animalName);
-          container.innerHTML += "<div class=' rs-animal-card col-xl-4 col-lg-6 col-md-6 mb-3'><div class='rs-card-border mr-2'><h3 class='rs-card-title px-2'>" + card.name + "</h3><div class='rs-background-img' style='background-image: url(" + cover.previews[5].url + "); background-position: center top; background-repeat: no-repeat; background-size: cover;height:550px;width: 100%;'></div><div class=' rs-card-body rs-card-body-" + card.name.replaceAll(' ','') + "' id='" + card.name.replaceAll(' ','') + "'><div class='rs-text-box'><p class='card-text p-3'>" + card.desc + ' If you are intrested in helping ' + card.name + ' find a new home please email <a href="mailto:Jessica@hawspets.org">Jessica@hawspets.org</a> today' + "</p><div style='text-align: center;'><a target='_blank' href='https://hawspets.org/foster-to-adopt-application-agreement/'><button style='padding: 10px; border: none; margin-top: 5px; margin-bottom: 10px; color: white; background-color: #88cd00; border-radius: 10px;'>Foster Application</button></a></div></div></div><p id='button-area-" + card.name.replaceAll(' ','') + "' class='card-text'><button onclick='showMore(" + animalName + ")' id='rs-button-" + card.name.replaceAll(' ','') + "' class='text-body-secondary rs-read-more'><div>Read More</div><span class='dashicons dashicons-arrow-down-alt'></span></button></p></div></div>";
+          container.innerHTML += "<div class=' rs-animal-card col-xl-4 col-lg-6 col-md-6 mb-3'><div class='rs-card-border mr-2'><h3 class='rs-card-title px-2'>" + card.name + "</h3><div class='rs-background-img' style='background-image: url(" + cover.previews[5].url + "); background-position: center top; background-repeat: no-repeat; background-size: cover;height:600px;width: 100%;'></div><div class=' rs-card-body rs-card-body-" + card.name.replaceAll(' ','') + "' id='" + card.name.replaceAll(' ','') + "'><div class='rs-text-box'><p class='card-text p-3'>" + card.desc + ' If you are intrested in helping ' + card.name + ' find a new home please email <a href="mailto:Jessica@hawspets.org">Jessica@hawspets.org</a> today' + "</p><div style='text-align: center;'><a target='_blank' href='https://hawspets.org/foster-to-adopt-application-agreement/'><button style='padding: 10px; border: none; margin-top: 5px; margin-bottom: 10px; color: white; background-color: #88cd00; border-radius: 10px;'>Foster Application</button></a></div></div></div><p id='button-area-" + card.name.replaceAll(' ','') + "' class='card-text'><button onclick='showMore(" + animalName + ")' id='rs-button-" + card.name.replaceAll(' ','') + "' class='text-body-secondary rs-read-more'><div>Read More</div><span class='dashicons dashicons-arrow-down-alt'></span></button></p></div></div>";
 //id='" + card.name.replaceAll(' ','') + "' ----> ID for the card above
       
   })
